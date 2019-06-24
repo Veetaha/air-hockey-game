@@ -5,9 +5,13 @@
  */ 
 
 #include <SDL.h>
+#include <SDL_image.h>
+#include <Eigen/Core>
 
 #include <iostream>
 #include <memory>
 #include <algorithm>
 #include <vector>
+#include <array>
+#include <unordered_map>
 #include <string>

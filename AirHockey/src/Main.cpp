@@ -1,14 +1,7 @@
-#include "AirHockeyApp.h"
+#include "AirHockeyGame.h"
 
 int main(int, char*[]) {
-	AirHockeyApp GameApp;
-
-	try {
-		GameApp.init();
-	} catch (const std::exception& err) {
-		std::cerr << err.what();
-		return EXIT_FAILURE;
-	}
-
-	return GameApp.run();
+	AirHockeyGame game;
+	AirHockeyGame::InitOpts initOpts;
+	return game.initAndRun(initOpts);
 }
