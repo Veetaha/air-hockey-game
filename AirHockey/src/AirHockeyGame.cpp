@@ -5,6 +5,7 @@
 #include "Ecs/Components/SpriteComponent.h"
 #include "TextureMgr.h"
 
+
 void AirHockeyGame::init(const InitOpts& opts) {
 	Super::init(opts);
 
@@ -14,7 +15,7 @@ void AirHockeyGame::init(const InitOpts& opts) {
 	auto sampleEntity{ std::make_unique<Entity>() };
 
 	sampleEntity->setComponent<MovementComponent>(Vector2D(500, 0), Vector2D(4, 24));
-
+	
 	auto texture{ TextureMgr::createTextureFromFile(renderer, "assets/img/sample.png") };
 	sampleEntity->setComponent<SpriteComponent>(
 		std::move(texture), 
